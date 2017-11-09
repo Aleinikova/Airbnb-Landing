@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 
 * {
 	box-sizing: border-box;
@@ -49,6 +50,7 @@ body {
 .introduction__title {
 	font-size: 32px;
 	margin-bottom: 15px;
+	font-weight: normal;
 }
 
 .introduction__description {
@@ -70,7 +72,7 @@ body {
 
 .hosts {
 	position: relative;
-	margin-top: -110px;
+	margin: -110px 0 100px 0;
 	background: url('./images/vlogs.png') no-repeat;
 }
 
@@ -89,9 +91,16 @@ body {
 	background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0));
 }
 
+.hosts-video {
+	display: flex;
+	position: relative;
+	margin-bottom: 20px;
+	width: 100%;
+	max-width: 463px;
+}
+
 .hosts-description {
 	position: relative;
-	top: 20px;
 }
 
 .hosts-description__title {
@@ -108,13 +117,6 @@ body {
 	color: #88939e;
 }
 
-.hosts-video {
-	display: flex;
-	position: relative;
-	width: 100%;
-	max-width: 463px;
-}
-
 .hosts-video::before {
 	content: '';
 	position: absolute;
@@ -122,4 +124,109 @@ body {
 	height: 100%;
 	opacity: 0.73;
 	background-image: linear-gradient(to top, #ffb1b4, #ff4b62);
+}
+
+.properties {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.property {
+	list-style: none;
+	margin-bottom: 50px;
+	opacity: 0.9;
+}
+
+.property:last-child {
+	margin-bottom: 0;
+}
+
+.property__value {
+	font-size: 48px;
+	font-weight: 900;
+	font-family: 'Merriweather', serif;
+	color: #fd666c;
+}
+
+.property__name {
+	font-size: 22px;
+	color: #88939e;
+}
+
+.history {
+	position: relative;
+	width: 100%;
+	max-width: 794px;
+	border-radius: 4px;
+  background-color: #fd6e74;
+}
+
+.history__photo {
+	width: 100%;
+}
+
+.history__title {
+	padding: 22px 30% 22px 15%;
+	opacity: 0.9;
+	color: #ffffff;
+}
+
+.button-add { /* ask about position of this element*/
+	position: absolute;
+	right: 0;
+	top: 130px;
+	width: 68px;
+	height: 68px;
+	border-radius: 50%;
+	background-color: #ffffff;
+}
+
+.button-add::before {
+	content: '';
+	position: absolute;
+	top: calc((100% - 5.5%) / 2);
+	left: calc((100% - 45%) / 2);
+	width: 45%;
+	height: 5.5%;
+	border-radius: 3.5px;
+	background-color: #fd6e74;
+}
+
+.button-add::after {
+	content: '';
+	position: absolute;
+	left: calc((100% - 5.5%) / 2);
+	top: calc((100% - 45%) / 2);
+	height: 45%;
+	width: 5.5%;
+	border-radius: 3.5px;
+	background-color: #fd6e74;
+}
+
+.opportunities {
+	padding: 66px 0;
+}
+
+.opportunity {
+	margin-bottom: 57px;
+	display: flex;
+	opacity: 0.9;
+}
+
+.opportunity__info {
+	font-size: 18px;
+}
+
+.opportunity__icon {
+	margin-right: 20px;
+}
+
+.opportunity__title {
+	margin-bottom: 11px;
+	font-weight: bold;
+	color: #fe757b;
+}
+
+.opportunity__description {
+	color: #88939e;
 }
