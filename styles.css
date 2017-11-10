@@ -10,7 +10,6 @@
 body {
 	font-family: 'Source Sans Pro';
 	font-size: 18px;
-	/*font-size: 22px;*/
 	color: #88939e;
 }
 .wrapper {
@@ -67,9 +66,8 @@ body {
 	padding: 14px 37px;
 	border: none;
 	border-radius: 100px;
-	background-color: #fd5c63;
 	font-size: 12px;
-	/*font-size: 22px;*/
+	background-color: #fd5c63;
 	color: #ffffff;
 }
 
@@ -111,7 +109,6 @@ body {
 .title {
 	font-size: 21px;
 	font-weight: normal;
-	/*font-size: 36px;*/
 	color: #4c4c51;
 }
 
