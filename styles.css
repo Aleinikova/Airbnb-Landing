@@ -18,6 +18,7 @@ body {
 	justify-content: inherit;
 	align-items: inherit;
 	width: 90%;
+	height: inherit;
 	margin: 0 auto;
 }
 
@@ -85,27 +86,33 @@ body {
 .hosts-info::before {
 	content: '';
 	position: absolute;
-	top: 0;
+	top: -145px;
 	left: 0;
 	width: 100%;
-	height: 100%;
-	background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0));
+	height: 675px;
+	background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
 .hosts-video {
 	display: flex;
 	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	left: -5%;
+	width: 110%;
 	margin-bottom: 20px;
 	max-width: 463px;
+	min-width: 320px;
 }
 
 .youtube-video {
-	width: 100%;
+	width: 110%;
 	height: 256px;
 }
 
 .hosts-description {
 	position: relative;
+	max-width: 693px;
 }
 
 .title {
@@ -135,7 +142,6 @@ body {
 .property {
 	list-style: none;
 	margin-bottom: 50px;
-	opacity: 0.9;
 }
 
 .property:last-child {
@@ -144,8 +150,9 @@ body {
 
 .property__value {
 	font-size: 48px;
-	font-weight: 900;
-	font-family: 'Merriweather', serif;
+	line-height: 1.4;
+	opacity: 0.9;
+	font-family: 'Merriweather';
 	color: #fd666c;
 }
 
@@ -159,10 +166,10 @@ body {
 	width: 100%;
 	max-width: 794px;
 	border-radius: 4px;
-	background-color: #fd6e74;
 }
 
 .history__photo {
+	display: block;
 	width: 100%;
 }
 
@@ -170,6 +177,7 @@ body {
 	padding: 22px 30% 22px 15%;
 	opacity: 0.9;
 	color: #ffffff;
+	background-color: #fd6e74;
 }
 
 .button-add { /* ask about position of this element*/
@@ -223,6 +231,8 @@ body {
 }
 
 .opportunity__icon {
+	width: 70px;
+	height: 70px;
 	margin-right: 20px;
 }
 
@@ -230,6 +240,10 @@ body {
 	margin-bottom: 11px;
 	font-weight: bold;
 	color: #fe757b;
+}
+
+.opportunity__info {
+	max-width: 342px;
 }
 
 .share-experience {
@@ -241,6 +255,9 @@ body {
 }
 
 .share-experience__description {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 820px;
 	font-size: 14px;
 	margin-bottom: 44px;
 	text-align: center;
@@ -341,4 +358,127 @@ body {
 
 .footer-nav__item:last-child {
 	margin-right: 0;
+}
+
+@media (min-width: 425px) {
+	.introduction__title {
+		font-size: 36px;
+	}
+
+	.introduction__description {
+		font-size: 18px;
+	}
+
+	.button {
+		font-size: 16px;
+	}
+
+	.hosts-video {
+		width: 100%;
+		left: 0;
+	}
+
+	.youtube-video {
+		width: 100%;
+	}
+}
+
+@media (min-width: 640px) {
+	.hosts-info {
+		display: flex;
+		flex-direction: row-reverse;
+		padding-top: 370px;
+	}
+
+	.hosts-description {
+		margin-right: 30px;
+	}
+
+	.properties {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.property__value {
+		font-size: 26px;
+	}
+
+	.property__name {
+		font-size: 14px;
+	}
+
+	.references__links {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+
+	.site-info {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.references__title {
+		text-align: left;
+	}
+
+	.property {
+		position: relative;
+		margin-bottom: 0;
+		width: calc(100% / 5);
+	}
+
+	.property::after {
+		content: '';
+		position: absolute;
+		top: 21px;
+		right: -10px;
+		width: 35px;
+		height: 2px;
+		border-radius: 1px;
+		background-color: #dbdbdb;
+	}
+
+	.property:last-child::after {
+		content: none;
+	}
+}
+
+@media (min-width: 920px) {
+	.body {
+		font-size: 22px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.hosts-info {
+		margin-bottom: 150px;
+	}
+	.properties {
+		margin-bottom: 143px;
+	}
+	.info {
+		display: flex;
+		align-items: center;
+	}
+	.history {
+		margin-right: 74px;
+	}
+	.opportunity {
+		margin-bottom: 0;
+	}
+	.opportunities {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	/*.opportunity:first-child {
+		padding-top: 53px;
+	}
+	.opportunity:last-child {
+		padding-bottom: 69px;
+	}*/
+	.opportunity__icon {
+		margin-right: 40px;
+	}
 }
