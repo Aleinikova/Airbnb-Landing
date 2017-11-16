@@ -15,10 +15,10 @@
 				<div class="user-avatar"></div>
 			</div>
 			<div class="introduction">
-				<h1 class="introduction__title">Share your passion with the world.</h1>
-				<div class="introduction__description">Create unique experiences around your city, and earn extra money
-	by bringing others along.</div>
-				<button class="button">Create an experience</button>
+				<h1 class="title introduction__title">Share your passion with the world.</h1>
+				<p class="description introduction__description">Create unique experiences around your city, and earn extra money
+	by bringing others along.</p>
+				<button class="experience-button introduction__button">Create an experience</button>
 			</div>
 		</div>
 	</div>
@@ -30,7 +30,7 @@
 				</div>
 				<div class="hosts-description">
 					<h2 class="title hosts-description__title">A sample of what great hosts do.</h2>
-					<p class="hosts-description__text">
+					<p class="description hosts-description__text">
 						Hosts are chefs, hikers, or just knowledgeable locals who want to show others little-known pockets of their community. They can host an experience or multiple ones over the course of a few days.
 					</p>
 				</div>
@@ -62,32 +62,34 @@
 		</div>
 	</ul>
 	<div class="info">
-		<div class="history">
-			<img src="./images/photo.png" alt="African clothing" class="history__photo">
-			<div class="history__title">Meet Angela: The evolution of African clothing </div>
-			<div class="button-add"></div>
-		</div>
-		<div class="wrapper">
+		<div class="wrapper info-wrapper">
+			<div class="history">
+				<img src="./images/photo.png" alt="African clothing" class="history__photo">
+				<h2 class="history__title">
+					<span>Meet Angela: The evolution of African clothing</span>
+					<button class="button-add" aria-label="Add"></button>
+				</h2>
+			</div>
 			<ul class="opportunities">
 				<li class="opportunity">
 					<img src="./svg/speaker.svg" alt="" class="opportunity__icon">
 					<div class="opportunity__info">
 						<h3 class="opportunity__title">Get more exposure</h3>
-						<p class="opportunity__description">Millions of travellers can find and book your experience in an instant.</p>
+						<p class="description opportunity__description">Millions of travellers can find and book your experience in an instant.</p>
 					</div>
 				</li>
 				<li class="opportunity">
 					<img src="./svg/tag.svg" alt="" class="opportunity__icon">
 					<div class="opportunity__info">
 						<h3 class="opportunity__title">Promote your brand</h3>
-						<p class="opportunity__description">Have a shareable profile with photos, videos, and reviews.</p>
+						<p class="description opportunity__description">Have a shareable profile with photos, videos, and reviews.</p>
 					</div>
 				</li>
 				<li class="opportunity">
 					<img src="./svg/handshake.svg" alt="" class="opportunity__icon">
 					<div class="opportunity__info">
 						<h3 class="opportunity__title">Meet locals like you</h3>
-						<p class="opportunity__description">Join a global community of hosts. Connect through meetups & events.</p>
+						<p class="description opportunity__description">Join a global community of hosts. Connect through meetups & events.</p>
 					</div>
 				</li>
 			</ul>
@@ -96,51 +98,64 @@
 	<div class="share-experience">
 		<div class="wrapper">
 			<h2 class="title share-experience__title">Ready to host an experience in your city?</h2>
-			<p class="share-experience__description">Start by designing the experience you have in mind. We’ll guide you through each step. If your experience meets the quality standards, you’ll hear more about what’s next.</p>
+			<p class="description share-experience__description">Start by designing the experience you have in mind. We’ll guide you through each step. If your experience meets the quality standards, you’ll hear more about what’s next.</p>
 			<div class="create-experience">
-				<select class="create-experience__drop-down">
-					<option class="placeholder" value="" disabled selected>Select a city</option>
+				<select class="drop-down create-experience__drop-down">
+					<option value="" disabled selected>Select a city</option>
 					<option value="london">London</option>
 					<option value="new-york">New-York</option>
 					<option value="minsk">Minsk</option>
 					<option value="krakow">Krakow</option>
 				</select>
-				<button class="create-experience__button">Create an experience</button>
+				<button class="experience-button create-experience__button">Create an experience</button>
 			</div>
 		</div>
 	</div>
 	<div class="site-info">
 		<div class="wrapper">
-			<div class="options"></div>
-			<div class="references">
-				<div class="references__title">Airbnb</div>
-				<ul class="references__links">
-					<a href="" class="references__link">About us</a>
-					<a href="" class="references__link">Careers</a>
-					<a href="" class="references__link">Press</a>
-					<a href="" class="references__link">Policies</a>
-					<a href="" class="references__link">Help</a>
-					<a href="" class="references__link">Diversity </a>
+			<div class="options">
+				<select class="drop-down options__drop-down">
+					<option value="english" selected>English</option>
+					<option value="russian">Russian</option>
+					<option value="german">German</option>
+					<option value="polish">Polish</option>
+				</select>
+				<select class="drop-down options__drop-down">
+					<option value="usd" selected>USD</option>
+					<option value="eur">EUR</option>
+					<option value="rub">RUB</option>
+					<option value="pln">PLN</option>
+				</select>
+			</div>
+			<div class="reference">
+				<div class="reference__title">Airbnb</div>
+				<ul class="reference__links">
+					<a href="" class="reference__link">About us</a>
+					<a href="" class="reference__link">Careers</a>
+					<a href="" class="reference__link">Press</a>
+					<a href="" class="reference__link">Policies</a>
+					<a href="" class="reference__link">Help</a>
+					<a href="" class="reference__link">Diversity </a>
 				</ul>
 			</div>
-			<div class="references">
-				<div class="references__title">Discover</div>
-				<ul class="references__links">
-					<a href="" class="references__link">Trust & Safety</a>
-					<a href="" class="references__link">Travel Credit</a>
-					<a href="" class="references__link">Airbnb Citizen</a>
-					<a href="" class="references__link">Business Travel</a>
-					<a href="" class="references__link">Guidebooks</a>
-					<a href="" class="references__link">Airbnbmag</a>
+			<div class="reference">
+				<div class="reference__title">Discover</div>
+				<ul class="reference__links">
+					<a href="" class="reference__link">Trust & Safety</a>
+					<a href="" class="reference__link">Travel Credit</a>
+					<a href="" class="reference__link">Airbnb Citizen</a>
+					<a href="" class="reference__link">Business Travel</a>
+					<a href="" class="reference__link">Guidebooks</a>
+					<a href="" class="reference__link">Airbnbmag</a>
 				</ul>
 			</div>
-			<div class="references">
-				<div class="references__title">Hosting</div>
-				<ul class="references__links">
-					<a href="" class="references__link">Why Host</a>
-					<a href="" class="references__link">Hospitality</a>
-					<a href="" class="references__link">Responsible Hosting</a>
-					<a href="" class="references__link">Community Centre</a>
+			<div class="reference">
+				<div class="reference__title">Hosting</div>
+				<ul class="reference__links">
+					<a href="" class="reference__link">Why Host</a>
+					<a href="" class="reference__link">Hospitality</a>
+					<a href="" class="reference__link">Responsible Hosting</a>
+					<a href="" class="reference__link">Community Centre</a>
 				</ul>
 			</div>
 		</div>
