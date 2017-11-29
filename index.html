@@ -5,15 +5,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Airbnb</title>
+	
 </head>
 <body>
 	<div class="welcome">
 		<div class="wrapper">
-			<div class="header">
-				<button class="nav-menu" aria-label="navigation menu">
+			<div class="header" id="header">
+				<button class="nav-menu" aria-label="navigation menu" id="nav-menu-button">
 					<img class="logo" src="./svg/logo.svg"/>
-					<img class="expand-icon" src="./svg/expand-icon.svg"/>
+					<svg class="expand-icon" width="12px" height="12px" viewBox="0 0 24 24">
+						<use href="#expand-icon"/>
+					</svg>
 				</button>
+				<ul class="nav">
+					<li class="nav__item">
+						<a class="link nav__link" href="">Trips</a>
+					</li>
+					<li class="nav__item">
+						<a class="link nav__link" href="">Messages</a>
+					</li>
+					<li class="nav__item">
+						<a class="link nav__link" href="">Help</a>
+					</li>
+				</ul>
 				<div class="user-avatar" aria-label="user avatar"></div>
 			</div>
 			<div class="introduction">
@@ -132,32 +146,32 @@
 			<div class="reference">
 				<div class="reference__title">Airbnb</div>
 				<ul class="reference__links">
-					<a href="" class="reference__link">About us</a>
-					<a href="" class="reference__link">Careers</a>
-					<a href="" class="reference__link">Press</a>
-					<a href="" class="reference__link">Policies</a>
-					<a href="" class="reference__link">Help</a>
-					<a href="" class="reference__link">Diversity </a>
+					<a href="" class="link reference__link">About us</a>
+					<a href="" class="link reference__link">Careers</a>
+					<a href="" class="link reference__link">Press</a>
+					<a href="" class="link reference__link">Policies</a>
+					<a href="" class="link reference__link">Help</a>
+					<a href="" class="link reference__link">Diversity </a>
 				</ul>
 			</div>
 			<div class="reference">
 				<div class="reference__title">Discover</div>
 				<ul class="reference__links">
-					<a href="" class="reference__link">Trust & Safety</a>
-					<a href="" class="reference__link">Travel Credit</a>
-					<a href="" class="reference__link">Airbnb Citizen</a>
-					<a href="" class="reference__link">Business Travel</a>
-					<a href="" class="reference__link">Guidebooks</a>
-					<a href="" class="reference__link">Airbnbmag</a>
+					<a href="" class="link reference__link">Trust & Safety</a>
+					<a href="" class="link reference__link">Travel Credit</a>
+					<a href="" class="link reference__link">Airbnb Citizen</a>
+					<a href="" class="link reference__link">Business Travel</a>
+					<a href="" class="link reference__link">Guidebooks</a>
+					<a href="" class="link reference__link">Airbnbmag</a>
 				</ul>
 			</div>
 			<div class="reference">
 				<div class="reference__title">Hosting</div>
 				<ul class="reference__links">
-					<a href="" class="reference__link">Why Host</a>
-					<a href="" class="reference__link">Hospitality</a>
-					<a href="" class="reference__link">Responsible Hosting</a>
-					<a href="" class="reference__link">Community Centre</a>
+					<a href="" class="link reference__link">Why Host</a>
+					<a href="" class="link reference__link">Hospitality</a>
+					<a href="" class="link reference__link">Responsible Hosting</a>
+					<a href="" class="link reference__link">Community Centre</a>
 				</ul>
 			</div>
 		</div>
@@ -166,15 +180,47 @@
 		<div class="wrapper">
 			<img src="./svg/footer-logo.svg" alt="" class="footer-logo">
 			<ul class="footer-nav">
-				<li class="footer-nav__item">Terms</li>
-				<li class="footer-nav__item">Privacy</li>
-				<li class="footer-nav__item">Site Map</li>
+				<li class="footer-nav__item">
+					<a class="link footer-nav__link" href="">Terms</a>
+				</li>
+				<li class="footer-nav__item">
+					<a class="link footer-nav__link" href="">Privacy</a>
+				</li>
+				<li class="footer-nav__item">
+					<a class="link footer-nav__link" href="">Site Map</a>
+				</li>
 			</ul>
 		</div>
 	</div>
 </body>
+<svg>
+	<symbol id="expand-icon">
+		<polyline fill="none" points="21,8.5 12,17.5 3,8.5 " stroke="#ffffff" stroke-miterlimit="10" stroke-width="2"/>
+	</symbol>	
+</svg>
 <link rel="stylesheet" href="./styles.css">
 <link rel="shortcut icon" sizes="76x76" type="image/x-icon" href="https://a0.muscache.com/airbnb/static/logotype_favicon-21cc8e6c6a2cca43f061d2dcabdf6e58.ico">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+<script>
+		const navButton = document.getElementById("nav-menu-button");
+		const header = document.getElementById("header");
+
+		navButton.onclick = () => { 
+			const width = document.documentElement.clientWidth;
+
+			if (width >= 920) {
+				return null;
+			}
+
+			const className = header.className;
+
+			if (className === 'header') {
+				header.className = 'header header_nav-isVisible';
+			}
+			else {
+				header.className = 'header';
+			}
+		}
+	</script>
 </html>
