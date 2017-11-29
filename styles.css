@@ -227,6 +227,23 @@ body {
 	background-image: linear-gradient(to top, #ffb1b4, #ff4b62);
 }
 
+.play-button {
+	position: absolute;
+	top: calc((100% - 117px) / 2);
+	left: calc((100% - 116px) / 2);
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.hosts-video_isActive::before {
+	content: none;
+}
+
+.hosts-video_isActive .play-button {
+	display: none;
+}
+
 .properties {
 	text-align: center;
 	margin-bottom: 100px;
@@ -630,20 +647,10 @@ body {
 	.history {
 		margin-right: 74px;
 	}
-	.opportunity {
-		margin-bottom: 0;
-	}
 	.opportunities {
 		height: 100%;
 		margin-left: 0;
 	}
-
-	/*.opportunity:first-child {
-		padding-top: 53px;
-	}
-	.opportunity:last-child {
-		padding-bottom: 69px;
-	}*/
 	.share-experience__description {
 		font-size: 22px;
 	}
